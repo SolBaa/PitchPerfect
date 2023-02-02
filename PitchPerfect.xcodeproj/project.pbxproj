@@ -60,17 +60,33 @@
 		5BF190A829898E7600D78EAB /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
-				5BF190C1298BDF0B00D78EAB /* PlaySoundsViewController+Audio.swift */,
+				5BF190C4298BE6BD00D78EAB /* View */,
+				5BF190C3298BE6A600D78EAB /* Controller */,
 				5BF190A929898E7600D78EAB /* AppDelegate.swift */,
 				5BF190AB29898E7600D78EAB /* SceneDelegate.swift */,
-				5BF190AD29898E7600D78EAB /* RecordSoundsViewController.swift */,
-				5BF190BF298AE20F00D78EAB /* PlaySoundsViewController.swift */,
-				5BF190AF29898E7600D78EAB /* Main.storyboard */,
 				5BF190B229898E7800D78EAB /* Assets.xcassets */,
-				5BF190B429898E7800D78EAB /* LaunchScreen.storyboard */,
 				5BF190B729898E7800D78EAB /* Info.plist */,
 			);
 			path = PitchPerfect;
+			sourceTree = "<group>";
+		};
+		5BF190C3298BE6A600D78EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BF190C1298BDF0B00D78EAB /* PlaySoundsViewController+Audio.swift */,
+				5BF190AD29898E7600D78EAB /* RecordSoundsViewController.swift */,
+				5BF190BF298AE20F00D78EAB /* PlaySoundsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BF190C4298BE6BD00D78EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BF190B429898E7800D78EAB /* LaunchScreen.storyboard */,
+				5BF190AF29898E7600D78EAB /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

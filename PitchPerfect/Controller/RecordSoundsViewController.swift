@@ -55,13 +55,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate  {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "stopRecording" {
-//            let playSoundViewController = segue.destination as! PlaySoundsViewController
-//            let recordedSoundURL = sender as! URL
-//            playSoundViewController.recordedAudioURL = recordedSoundURL
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "stopRecording" {
+            let playSoundViewController = segue.destination as! PlaySoundsViewController
+            let recordedSoundURL = sender as! URL
+            playSoundViewController.recordedAudioURL = recordedSoundURL
+        }
+    }
     
     func setPlayButtonsEnabled(_ enabled: Bool) {
         stopRecordingButton.isEnabled = !enabled
