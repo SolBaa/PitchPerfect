@@ -15,26 +15,25 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate  {
     @IBOutlet var recordLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setPlayButtonsEnabled(true)
     }
-
+    
     @IBAction func recordAudio(_ sender: UIButton) {
         setPlayButtonsEnabled(false)
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-               let recordingName = "recordedVoice.wav"
-               let pathArray = [dirPath, recordingName]
-               let filePath = URL(string: pathArray.joined(separator: "/"))
-               
-               let audioSession = AVAudioSession.sharedInstance()
-               try! audioSession.setCategory(.playAndRecord, mode: .spokenAudio, options: .defaultToSpeaker)
-               
-               try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
-               audioRecorder.delegate = self
-               audioRecorder.isMeteringEnabled = true
-               audioRecorder.prepareToRecord()
-               audioRecorder.record()
-
+        let recordingName = "recordedVoice.wav"
+        let pathArray = [dirPath, recordingName]
+        let filePath = URL(string: pathArray.joined(separator: "/"))
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        try! audioSession.setCategory(.playAndRecord, mode: .spokenAudio, options: .defaultToSpeaker)
+        
+        try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+        audioRecorder.delegate = self
+        audioRecorder.isMeteringEnabled = true
+        audioRecorder.prepareToRecord()
+        audioRecorder.record()
+        
     }
     
     
